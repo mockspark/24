@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #800080; 
+            color: #fff;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff32;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333; 
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .summary, .recommendations {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+        .summary h2, .recommendations h2 {
+            color: #555;
+        }
+        .data-point {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .data-point span {
+            font-weight: bold;
+        }
+        .recommendations ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 220px; 
+        }
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px; 
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #a54caf; 
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #922c9e;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo_fix.png" alt="Logo" class="logo">
+
+    <div class="container">
+        <h1>Personalized Health Report</h1>
+        
+   
+        <div class="summary">
+            <h2>Summary of Health Metrics</h2>
+            <div class="data-point">
+                <p>Age:</p><span>45 years</span>
+            </div>
+            <div class="data-point">
+                <p>BMI:</p><span>28.5 (Overweight)</span>
+            </div>
+            <div class="data-point">
+                <p>Blood Pressure:</p><span>130/85 mmHg (Borderline High)</span>
+            </div>
+            <div class="data-point">
+                <p>HbA1c:</p><span>6.2% (Pre-diabetes)</span>
+            </div>
+            <div class="data-point">
+                <p>Cholesterol:</p><span>LDL: 140 mg/dL (High)</span>
+            </div>
+            <div class="data-point">
+                <p>Smoking Status:</p><span>Non-Smoker</span>
+            </div>
+            <div class="data-point">
+                <p>Physical Activity Level:</p><span>Low</span>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h2>Health Recommendations</h2>
+            <ul>
+                <li>Consider increasing physical activity to at least 150 minutes per week.</li>
+                <li>Follow a diet rich in fruits, vegetables, and whole grains to manage BMI and cholesterol.</li>
+                <li>Monitor blood pressure regularly and consider reducing salt intake.</li>
+                <li>Reassess HbA1c level every 3-6 months to monitor pre-diabetes status.</li>
+                <li>If LDL cholesterol remains high, consult a healthcare provider about possible interventions.</li>
+                <li>Drink at least 8 glasses of water per day to stay hydrated.</li>
+                <li>Try to sleep 7-8 hours each night to support overall health.</li>
+                <li>Incorporate stress-reducing practices like meditation, yoga, or deep breathing exercises.</li>
+                <li>Avoid processed foods and high-sugar snacks to maintain stable blood sugar levels.</li>
+                <li>Schedule regular health check-ups to track and manage health metrics over time.</li>
+            </ul>
+        </div>
+    </div>
+
+ 
+    <div class="button-container">
+        <button class="button" onclick="downloadReport()">Download Report</button>
+        <button class="button" onclick="window.location.href='index.html'">Exit</button>
+    </div>
+
+    <script>
+        function downloadReport() {
+            const element = document.createElement("a");
+            const text = `
+Personalized Health Report:
+
+Summary of Health Metrics:
+- Age: 45 years
+- BMI: 28.5 (Overweight)
+- Blood Pressure: 130/85 mmHg (Borderline High)
+- HbA1c: 6.2% (Pre-diabetes)
+- Cholesterol: LDL: 140 mg/dL (High)
+- Smoking Status: Non-Smoker
+- Physical Activity Level: Low
+
+Health Recommendations:
+1. Consider increasing physical activity to at least 150 minutes per week.
+2. Follow a diet rich in fruits, vegetables, and whole grains to manage BMI and cholesterol.
+3. Monitor blood pressure regularly and consider reducing salt intake.
+4. Reassess HbA1c level every 3-6 months to monitor pre-diabetes status.
+5. If LDL cholesterol remains high, consult a healthcare provider about possible interventions.
+`;
+            const file = new Blob([text], { type: "text/plain" });
+            element.href = URL.createObjectURL(file);
+            element.download = "Health_Report.txt";
+            document.body.appendChild(element);
+            element.click();
+        }
+    </script>
+</body>
+</html>

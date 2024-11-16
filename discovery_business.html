@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Patterns Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            background-color: #800080; 
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center; 
+        }
+        .pattern-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            color: #000; 
+        }
+        .pattern-table th, .pattern-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .pattern-table th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .dropdown {
+            padding: 5px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 240px; 
+        }
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #a54caf; 
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color:#800080; 
+        }
+    </style>
+</head>
+<body>
+   
+    <img src="logo_fix.png" alt="Logo" class="logo">
+
+    <div class="container">
+        <h1> Business Patterns</h1>
+        <p>The table below is the key patterns discovered in business analytics and please indicate your desired ranking for each.</p>
+        <table class="pattern-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Pattern Description</th>
+                    <th>Match (%)</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Normalized comparison of sales in top-performing branches.</td>
+                    <td>85%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Analyzing the impact of advertising costs on sales performance.</td>
+                    <td>90%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Demographic analysis of youth, elderly, and urban populations near top branches.</td>
+                    <td>88%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Analyzing proximity to schools, income levels, and suburban populations affecting branch performance.</td>
+                    <td>75%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Combining all factors to evaluate overall branch performance.</td>
+                    <td>80%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Impact of weather conditions on purchase behavior.</td>
+                    <td>70%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Customer retention through attractive offers for loyal customers.</td>
+                    <td>85%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4" selected>4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Identifying the percentage of low-performing products.</td>
+                    <td>60%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4" selected>4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Analyzing reasons behind low-performing products.</td>
+                    <td>65%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Finding relationships between purchased items.</td>
+                    <td>90%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Analyzing purchase patterns throughout the day.</td>
+                    <td>75%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4" selected>4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Top-performing products during weekends.</td>
+                    <td>80%</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-container">
+            <button class="button" onclick="location.href='Results _Comparison_business.html'">Compare</button>
+            <button class="button" onclick="location.href='result_business.html'">Results</button>
+        </div>
+    </div>
+</body>
+</html>

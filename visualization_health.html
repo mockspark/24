@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Data Visualizations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #800080; 
+            position: relative;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .chart {
+            text-align: center;
+            background-color: #fff;
+            color: #333; 
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .chart img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 240px; 
+        }
+        .discovery-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background-color: #800080; 
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .discovery-btn:hover {
+            background-color: #800080; 
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo_fix.png" alt="Logo" class="logo">
+
+    <div class="container">
+        <h1>Healthcare Data Visualizations</h1>
+        <div class="grid">
+            <div class="chart">
+                <h2>1. Age Distribution</h2>
+                <img src="IMG_1313.jpg" alt="Age Distribution">
+            </div>
+            <div class="chart">
+                <h2>2. BMI Distribution</h2>
+                <img src="IMG_1314.jpg" alt="BMI Distribution">
+            </div>
+            <div class="chart">
+                <h2>3. Gender Distribution</h2>
+                <img src="IMG_1315.jpg" alt="Gender Distribution">
+            </div>
+            <div class="chart">
+                <h2>4. Smoking Status Distribution</h2>
+                <img src="IMG_1316.jpg" alt="Smoking Status Distribution">
+            </div>
+            <div class="chart">
+                <h2>5. Systolic Blood Pressure Distribution</h2>
+                <img src="IMG_1317.jpg" alt="Systolic Blood Pressure Distribution">
+            </div>
+            <div class="chart">
+                <h2>6. Diastolic Blood Pressure Distribution</h2>
+                <img src="IMG_1318.jpg" alt="Diastolic Blood Pressure Distribution">
+            </div>
+            <div class="chart">
+                <h2>7. LDL Cholesterol Distribution</h2>
+                <img src="IMG_1319.jpg" alt="LDL Cholesterol Distribution">
+            </div>
+            <div class="chart">
+                <h2>8. Triglycerides Distribution</h2>
+                <img src="IMG_1320.jpg" alt="Triglycerides Distribution">
+            </div>
+            <div class="chart">
+                <h2>9. HbA1c Distribution</h2>
+                <img src="IMG_1321.jpg" alt="HbA1c Distribution">
+            </div>
+        </div>
+    </div>
+
+    <button class="discovery-btn" onclick="location.href='discovery_health.html'">Discover Patterns</button>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Comparison - Stock Market Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center; 
+        }
+        .chart-container {
+            margin: 20px 0;
+        }
+        .chart-container canvas {
+            max-width: 100%;
+        }
+        .table-container {
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 200px;
+        }
+        .discover-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background-color: #800080;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .discover-btn:hover {
+            background-color: #800080;
+        }
+    </style>
+</head>
+<body>
+ 
+    <img src="logo_fix.png" alt="Logo" class="logo">
+
+    <div class="container">
+        <h1>Results Comparison</h1>
+        <p>This page showcases how Inductive Logic Programming (ILP) significantly improves stock market data analysis.</p>
+
+
+        <div class="chart-container">
+            <canvas id="comparisonChart"></canvas>
+        </div>
+
+       
+        <div class="table-container">
+            <h2>Performance Metrics</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Without ILP</th>
+                        <th>With ILP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Accuracy (%)</td>
+                        <td>70</td>
+                        <td>92</td>
+                    </tr>
+                    <tr>
+                        <td>Patterns Identified</td>
+                        <td>7</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>False Positives (%)</td>
+                        <td>18</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>False Negatives (%)</td>
+                        <td>12</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Actionable Insights (%)</td>
+                        <td>40</td>
+                        <td>80</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+       
+        const data = {
+            labels: ['Accuracy', 'False Positives', 'False Negatives', 'Actionable Insights'],
+            datasets: [
+                {
+                    label: 'Without ILP',
+                    data: [70, 18, 12, 40],
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1,
+                },
+                {
+                    label: 'With ILP',
+                    data: [92, 5, 3, 80],
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        };
+
+        
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                    },
+                },
+            },
+        };
+
+     
+        new Chart(ctx, config);
+    </script>
+
+   
+    <button class="discover-btn" onclick="window.location.href='discovery_finance.html'">Discover Patterns</button>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovered Patterns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #800080; 
+            color: #fff; 
+            position: relative;
+        }
+        .pattern-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffffd2; 
+            color: #000; 
+        }
+        .pattern-table th, .pattern-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .pattern-table th {
+            background-color: #f2f2f2;
+        }
+        .dropdown {
+            padding: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 240px; 
+        }
+        .results-btn, .compare-btn {
+            position: fixed;
+            bottom: 20px;
+            padding: 15px 30px;
+            background-color: #a54caf; 
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .results-btn:hover, .compare-btn:hover {
+            background-color: #800080; 
+        }
+        .results-btn {
+            right: 20px;
+        }
+        .compare-btn {
+            right: 180px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <img src="logo_fix.png" alt="Logo" class="logo">
+
+    <div class="container">
+        <h1> Patterns</h1>
+        <table class="pattern-table">
+            <thead>
+                <tr>
+                    <th>Pattern Description</th>
+                    <th>Match (%)</th>
+                    <th>Data Points</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Patients with Family History of Diabetes</td>
+                    <td>80%</td>
+                    <td>400</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patients with Family History of Cancer</td>
+                    <td>65%</td>
+                    <td>320</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patients with Family History of Heart Disease</td>
+                    <td>72%</td>
+                    <td>350</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patients > 65 years with systolic blood pressure > 140 mmHg and LDL cholesterol > 100 mg/dL</td>
+                    <td>85%</td>
+                    <td>250</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Individuals with BMI > 35 and HbA1c > 6.5%</td>
+                    <td>90%</td>
+                    <td>300</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Smokers aged 45-65 with elevated C-reactive protein (CRP > 3 mg/L)</td>
+                    <td>78%</td>
+                    <td>180</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Females > 50 years with family history of breast cancer and BRCA1 mutation</td>
+                    <td>95%</td>
+                    <td>130</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patients aged 60+ with serum creatinine > 1.5 mg/dL and eGFR < 60 mL/min/1.73 m²</td>
+                    <td>88%</td>
+                    <td>210</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4" selected>4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Men aged 50-70 with PSA > 4 ng/mL and positive family history of prostate cancer</td>
+                    <td>92%</td>
+                    <td>180</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Individuals with high blood pressure (systolic > 130 mmHg) and diabetes (HbA1c > 6.5%)</td>
+                    <td>84%</td>
+                    <td>260</td>
+                    <td>
+                        <select class="dropdown">
+                            <option value="1">1 - Very Low</option>
+                            <option value="2">2 - Low</option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5" selected>5 - Excellent</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Buttons -->
+    <button class="compare-btn" onclick="location.href='Results _Comparison_health.html'">Compare</button>
+    <button class="results-btn" onclick="location.href='result_health.html'">Results</button>
+
+</body>
+</html>
